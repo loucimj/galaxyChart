@@ -12,31 +12,24 @@ import Foundation
 
 class GalaxyChartView: UIView {
 
-    func createChart (galaxyData: NSDictionary  ) {
+    func createChart (galaxyData: GalaxyChartResponseModel  ) {
+
+        var maxBubbleSize:Int = 140
+        var totalStars = 0
+        var maxStarsQuantity = 0
         
-        var bubble1 :UIView
-        var bubble2 :UIView
-        var bubble3 :UIView
-        var bubble4 :UIView
-        var bubble5 :UIView
-        var bubble6 :UIView
-        var bubble7 :UIView
+        for node in galaxyData.result {
+            totalStars += node.starsQuantity
+            if maxStarsQuantity < node.starsQuantity {
+                maxStarsQuantity =  node.starsQuantity
+            }
+        }
         
-        bubble1 = BubbleView(size: 140, text: "Burbuja 1", color: UIColor.blueColor())
-        bubble2 = BubbleView(size: 80, text: "Burbuja 2", color: UIColor.purpleColor())
-        bubble3 = BubbleView(size: 40, text: "Burbuja 3", color: UIColor.lightGrayColor())
-        bubble4 = BubbleView(size: 100, text: "Burbuja 4", color: UIColor.lightGrayColor())
-        bubble5 = BubbleView(size: 60, text: "Burbuja 5", color: UIColor.greenColor())
-        bubble6 = BubbleView(size: 30, text: "Burbuja 6", color: UIColor.magentaColor())
-        bubble7 = BubbleView(size: 90, text: "Burbuja 7", color: UIColor.redColor())
-        
-        self.addSubview(bubble6)
-        self.addSubview(bubble7)
-        self.addSubview(bubble3)
-        self.addSubview(bubble1)
-        self.addSubview(bubble2)
-        self.addSubview(bubble4)
-        self.addSubview(bubble5)
+        for node in galaxyData.result {
+            var bubbleSize:Double = Double((node.starsQuantity * maxBubbleSize) / maxStarsQuantity)
+            var bubble = BubbleView(size: CGFloat(bubbleSize), text: node.name, color: UIColor(rgba: node.color))
+            self.addSubview(bubble)
+        }
     }
     
     override func layoutSubviews() {
