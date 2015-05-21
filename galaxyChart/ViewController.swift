@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var chart: GalaxyChartView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var chartData : NSDictionary = NSDictionary.alloc()
+        
+        
+        chart?.createChart(chartData)
+        
     }
 
     override func didReceiveMemoryWarning() {

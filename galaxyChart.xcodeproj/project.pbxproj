@@ -13,6 +13,8 @@
 		418995281B0CC06600A7F504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418995271B0CC06600A7F504 /* Images.xcassets */; };
 		4189952B1B0CC06600A7F504 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418995291B0CC06600A7F504 /* LaunchScreen.xib */; };
 		418995371B0CC06600A7F504 /* galaxyChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995361B0CC06600A7F504 /* galaxyChartTests.swift */; };
+		418995411B0CC08700A7F504 /* GalaxyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995401B0CC08700A7F504 /* GalaxyChartView.swift */; };
+		418995431B0CFFC600A7F504 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995421B0CFFC600A7F504 /* BubbleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		418995301B0CC06600A7F504 /* galaxyChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galaxyChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418995351B0CC06600A7F504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418995361B0CC06600A7F504 /* galaxyChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galaxyChartTests.swift; sourceTree = "<group>"; };
+		418995401B0CC08700A7F504 /* GalaxyChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalaxyChartView.swift; sourceTree = "<group>"; };
+		418995421B0CFFC600A7F504 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				418995271B0CC06600A7F504 /* Images.xcassets */,
 				418995291B0CC06600A7F504 /* LaunchScreen.xib */,
 				4189951E1B0CC06600A7F504 /* Supporting Files */,
+				418995401B0CC08700A7F504 /* GalaxyChartView.swift */,
+				418995421B0CFFC600A7F504 /* BubbleView.swift */,
 			);
 			path = galaxyChart;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418995411B0CC08700A7F504 /* GalaxyChartView.swift in Sources */,
 				418995231B0CC06600A7F504 /* ViewController.swift in Sources */,
+				418995431B0CFFC600A7F504 /* BubbleView.swift in Sources */,
 				418995211B0CC06600A7F504 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
