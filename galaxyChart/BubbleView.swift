@@ -21,10 +21,17 @@ import Foundation
 
 class BubbleView: UIView {
     
-    
-    
     convenience init (size:CGFloat, text: String, color: UIColor) {
         self.init()
+        createView(size, text: text, color: color, animated: false)
+    }
+    
+    convenience init (size:CGFloat, text: String, color: UIColor, animated: Bool) {
+        self.init()
+        createView(size, text: text, color: color, animated: animated)
+    }
+    
+    private func createView (size:CGFloat, text: String, color: UIColor, animated: Bool) {
         var fontSize:CGFloat = 12.0
         
         var labelHeightAddition:CGFloat = 0
@@ -109,6 +116,22 @@ class BubbleView: UIView {
         self.addSubview(circleView)
         self.addSubview(imageView)
         self.addSubview(bubbleLabel)
+        
+        if (animated) {
+            self.transform = CGAffineTransformMakeScale(0.3, 0.3)
+            self.alpha = 0
+            var delay:Float = Float(arc4random_uniform(100) )/100
+            UIView.animateWithDuration(1.3,
+                delay: NSTimeInterval(delay),
+                usingSpringWithDamping: 0.2,
+                initialSpringVelocity: 8.0,
+                options: UIViewAnimationOptions.AllowUserInteraction,
+                animations: {
+                    self.transform = CGAffineTransformIdentity
+                    self.alpha = 1
+                }, completion: nil)
+            
+        }
     }
     
     

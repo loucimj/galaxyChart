@@ -27,7 +27,7 @@ class GalaxyChartView: UIView {
         
         for node in galaxyData.result {
             var bubbleSize:Double = Double((node.starsQuantity * maxBubbleSize) / maxStarsQuantity)
-            var bubble = BubbleView(size: CGFloat(bubbleSize), text: node.name, color: UIColor(rgba: node.color))
+            var bubble = BubbleView(size: CGFloat(bubbleSize), text: node.name, color: UIColor(rgba: node.color), animated: true)
             self.addSubview(bubble)
         }
     }

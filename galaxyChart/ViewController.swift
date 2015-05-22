@@ -56,28 +56,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    static func getCoreValueColorByName(name: String?) -> (color: UIColor, viewName: String) {
-//        
-//        var coreValueColor: (color: UIColor, viewName: String)?
-//        switch name ?? "" {
-//        case "Aim for Excellence in your Work":
-//            //            coreValueColor = (color: UIColor(rgba: "#c2b9d6"), viewName: "aim-for-excellence-star-bubble")
-//            coreValueColor = (color: UIColor(rgba: "#614c97"), viewName: "aim-for-excellence-star-bubble")
-//        case "Constantly Innovate":
-//            coreValueColor = (color: UIColor(rgba: "#223c90"), viewName: "constantly-innovate-star-bubble")
-//        case "Have Fun":
-//            coreValueColor = (color: UIColor(rgba: "#f5b60d"), viewName: "have-fun-star-bubble")
-//        case "Think Big":
-//            coreValueColor = (color: UIColor(rgba: "#de2d61"), viewName: "think-big-star-bubble")
-//        case "Be a Team Player":
-//            coreValueColor = (color: UIColor(rgba: "#008d80"), viewName: "team-player-star-bubble")
-//        case "Act Ethically":
-//            coreValueColor = (color: UIColor(rgba: "#6cb143"), viewName: "act-ethically-star-bubble")
-//        default:
-//            coreValueColor = (color: UIColor(rgba: "#00bcd4"), viewName: "skill-value-star-bubble")
-//        }
-//        return coreValueColor!
-//    }
 
 
 }
