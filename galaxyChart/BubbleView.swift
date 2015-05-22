@@ -1,11 +1,3 @@
-//
-//  BubbleView.swift
-//  galaxyChart
-//
-//  Created by Javi on 20/5/15.
-//  Copyright (c) 2015 Javier Loucim. All rights reserved.
-//
-
 import Foundation
 //
 //  GalaxyChartView.swift
@@ -39,13 +31,11 @@ class BubbleView: UIView {
         let minimumLabelWidth:CGFloat = 60
         
         var minLabelHeight:CGFloat = 30
+
         if (size <= 100) {
-//            fontSize = 12
         } else if (size > 100 && size < 150) {
-//            fontSize = 16
             minLabelHeight = 40
         } else {
-//            fontSize = 18
             minLabelHeight = 40
         }
         
@@ -95,7 +85,6 @@ class BubbleView: UIView {
         bubbleLabel.numberOfLines = 0;
         bubbleLabel.minimumScaleFactor = 0.5
         bubbleLabel.adjustsFontSizeToFitWidth = true
-//        bubbleLabel.sizeThatFits(self.frame.size)
         
         
         var circleView:UIView = UIView()
