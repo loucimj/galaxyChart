@@ -47,25 +47,28 @@ class GalaxyChartView: UIView {
         super.layoutSubviews()
     }
     
-    func getNextAvailableCoordinate (stackOrder: Int) -> CGPoint {
+    private func getNextAvailableCoordinate (stackOrder: Int) -> CGPoint {
         var coordinate: CGPoint = CGPoint(x: 0, y: 0)
 
         if (stackOrder > 0) {
-            var isOccupied: Bool
+            var isCoordinateOccupied: Bool
             let currentView = subviews[stackOrder] as! UIView
             for yPosition in 0...Int(self.frame.height) {
-                isOccupied = true
+                isCoordinateOccupied = true
                 for xPosition in 0...Int(self.frame.width) {
                     coordinate = CGPoint(x: CGFloat(xPosition), y: CGFloat(yPosition))
-                    isOccupied = isPointOccupied(coordinate, stackOrder: stackOrder-1)
-                    if !isOccupied {
+                    isCoordinateOccupied = isPointOccupied(coordinate, stackOrder: stackOrder-1)
+                    if !isCoordinateOccupied {
                         break
                     }
                 }
                 var topRightCorner:CGPoint = CGPointMake(coordinate.x + currentView.frame.width,coordinate.y)
-                if (!isOccupied) && (topRightCorner.x) < self.frame.width {
+                if (!isCoordinateOccupied) && (topRightCorner.x) < self.frame.width {
                     if !isPointOccupied(topRightCorner, stackOrder: stackOrder-1)  {
-                        break
+                        var destinationArea = CGRectMake(coordinate.x, coordinate.y, currentView.frame.size.width, currentView.frame.size.height)
+                        if !isAreaOccupied(destinationArea,stackOrder: stackOrder-1) {
+                            break
+                        }
                     }
                 }
                 
@@ -74,7 +77,7 @@ class GalaxyChartView: UIView {
         return coordinate
     }
     
-    func isPointOccupied (point: CGPoint, stackOrder: Int) -> Bool {
+    private func isPointOccupied (point: CGPoint, stackOrder: Int) -> Bool {
         var x: Int = 0
         
         var isOccupied: Bool = false
@@ -91,4 +94,19 @@ class GalaxyChartView: UIView {
         return isOccupied
     }
     
+    private func isAreaOccupied (area:CGRect, stackOrder: Int) -> Bool {
+        var isOccupied: Bool = false
+        var x: Int = 0
+        while x <= stackOrder && !isOccupied {
+            var viewToAnalyze:UIView = self.subviews[x] as! UIView
+            var currentRect: CGRect = viewToAnalyze.frame
+            if (CGRectIntersectsRect(currentRect, area)) {
+                isOccupied = true
+                break
+            }
+            x++
+        }
+        
+        return isOccupied
+    }
 }

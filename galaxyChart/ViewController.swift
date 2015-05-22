@@ -21,25 +21,30 @@ class ViewController: UIViewController {
         var node: ChartNodeModel
         
         dataFromService.message = "OK"
+        node = ChartNodeModel(nodeID: 0, name: "Awesome", starsQuantity: 2, color: "#00bcd4", imageID: "7", percentage: 0.0)
+        dataFromService.result.append(node)
+        
         
         node = ChartNodeModel(nodeID: 0, name: "Think Big", starsQuantity: 5, color: "#614c97", imageID: "1", percentage: 0.0)
         dataFromService.result.append(node)
         
-        node = ChartNodeModel(nodeID: 0, name: "Achiever", starsQuantity: 2, color: "#6cb143", imageID: "7", percentage: 0.0)
-        dataFromService.result.append(node)
-        
-        node = ChartNodeModel(nodeID: 0, name: "Awesome", starsQuantity: 2, color: "#00bcd4", imageID: "7", percentage: 0.0)
-        dataFromService.result.append(node)
-        
-
         node = ChartNodeModel(nodeID: 0, name: "Constantly Innovate", starsQuantity: 7, color: "#223c90", imageID: "7", percentage: 0.0)
+        dataFromService.result.append(node)
+
+        
+        node = ChartNodeModel(nodeID: 0, name: "Have Fun", starsQuantity: 2, color: "#f5b60d", imageID: "7", percentage: 0.0)
         dataFromService.result.append(node)
 
         node = ChartNodeModel(nodeID: 0, name: "Leadership", starsQuantity: 3, color: "#008d80", imageID: "7", percentage: 0.0)
         dataFromService.result.append(node)
 
-        node = ChartNodeModel(nodeID: 0, name: "Have Fun", starsQuantity: 2, color: "#f5b60d", imageID: "7", percentage: 0.0)
+
+        
+        node = ChartNodeModel(nodeID: 0, name: "Achiever", starsQuantity: 2, color: "#6cb143", imageID: "7", percentage: 0.0)
         dataFromService.result.append(node)
+        
+
+
 
         node = ChartNodeModel(nodeID: 0, name: "Superman", starsQuantity: 2, color: "#00bcd4", imageID: "7", percentage: 0.0)
         dataFromService.result.append(node)

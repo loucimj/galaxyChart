@@ -57,11 +57,11 @@ class BubbleView: UIView {
             textColor = UIColor.darkGrayColor()
             labelHeightAddition = labelHeight
             imageYCenterPosition = size / 2
+            imageSize = size * 0.40
             if size < minimumLabelWidth {
                 labelWidth = minimumLabelWidth
                 labelWidthAddition = minimumLabelWidth - size
                 labelXPosition = labelWidth/2
-                imageSize = size * 0.40
             } else {
                 labelWidth =  size
             }
