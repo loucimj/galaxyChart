@@ -51,15 +51,16 @@ class BubbleView: UIView {
         var imageSize:CGFloat = size * 0.25
         
         if labelHeight < minLabelHeight {
+            //Then place the label below the bubble and center the image
             labelHeight = minLabelHeight
             labelYPosition = size + (labelHeight / 2)
             textColor = UIColor.darkGrayColor()
             labelHeightAddition = labelHeight
+            imageYCenterPosition = size / 2
             if size < minimumLabelWidth {
                 labelWidth = minimumLabelWidth
                 labelWidthAddition = minimumLabelWidth - size
                 labelXPosition = labelWidth/2
-                imageYCenterPosition = size / 2
                 imageSize = size * 0.40
             } else {
                 labelWidth =  size
