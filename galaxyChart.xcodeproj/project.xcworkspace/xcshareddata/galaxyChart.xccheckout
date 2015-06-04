@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AD326509-0103-411F-BEE7-21231E344537</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CC85470697B2CEEC142C5A3C46A302C47BA8BA1D</key>
+		<string>https://github.com/loucimj/galaxyChart.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>galaxyChart.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CC85470697B2CEEC142C5A3C46A302C47BA8BA1D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/loucimj/galaxyChart.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CC85470697B2CEEC142C5A3C46A302C47BA8BA1D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC85470697B2CEEC142C5A3C46A302C47BA8BA1D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>galaxyChart</string>
+		</dict>
+	</array>
+</dict>
+</plist>

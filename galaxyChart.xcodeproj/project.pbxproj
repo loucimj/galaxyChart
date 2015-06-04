@@ -15,6 +15,7 @@
 		418995371B0CC06600A7F504 /* galaxyChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995361B0CC06600A7F504 /* galaxyChartTests.swift */; };
 		418995411B0CC08700A7F504 /* GalaxyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995401B0CC08700A7F504 /* GalaxyChartView.swift */; };
 		418995431B0CFFC600A7F504 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995421B0CFFC600A7F504 /* BubbleView.swift */; };
+		41B718BD1B20D2D8003DAF25 /* Int64+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B718BC1B20D2D8003DAF25 /* Int64+random.swift */; };
 		41D0BB821B0E5F9300021A4E /* ChartNodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0BB811B0E5F9300021A4E /* ChartNodeModel.swift */; };
 		41D0BB841B0E608700021A4E /* GalaxyChartResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0BB831B0E608700021A4E /* GalaxyChartResponseModel.swift */; };
 		41D0BB881B0E6A0F00021A4E /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0BB871B0E6A0F00021A4E /* UIColor+Hex.swift */; };
@@ -43,6 +44,7 @@
 		418995361B0CC06600A7F504 /* galaxyChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galaxyChartTests.swift; sourceTree = "<group>"; };
 		418995401B0CC08700A7F504 /* GalaxyChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalaxyChartView.swift; sourceTree = "<group>"; };
 		418995421B0CFFC600A7F504 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		41B718BC1B20D2D8003DAF25 /* Int64+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int64+random.swift"; sourceTree = "<group>"; };
 		41D0BB811B0E5F9300021A4E /* ChartNodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartNodeModel.swift; path = model/ChartNodeModel.swift; sourceTree = "<group>"; };
 		41D0BB831B0E608700021A4E /* GalaxyChartResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalaxyChartResponseModel.swift; path = model/GalaxyChartResponseModel.swift; sourceTree = "<group>"; };
 		41D0BB871B0E6A0F00021A4E /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				418995401B0CC08700A7F504 /* GalaxyChartView.swift */,
 				418995421B0CFFC600A7F504 /* BubbleView.swift */,
 				41D0BB871B0E6A0F00021A4E /* UIColor+Hex.swift */,
+				41B718BC1B20D2D8003DAF25 /* Int64+random.swift */,
 			);
 			path = galaxyChart;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				418995431B0CFFC600A7F504 /* BubbleView.swift in Sources */,
 				41D0BB821B0E5F9300021A4E /* ChartNodeModel.swift in Sources */,
 				418995211B0CC06600A7F504 /* AppDelegate.swift in Sources */,
+				41B718BD1B20D2D8003DAF25 /* Int64+random.swift in Sources */,
 				41D0BB841B0E608700021A4E /* GalaxyChartResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

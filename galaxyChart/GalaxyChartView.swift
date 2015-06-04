@@ -43,13 +43,54 @@ class GalaxyChartView: UIView {
             var view = subviews[index] as! UIView
             view.frame.origin = newOrigin
         }
-            
         super.layoutSubviews()
     }
     
     private func getNextAvailableCoordinate (stackOrder: Int) -> CGPoint {
         var coordinate: CGPoint = CGPoint(x: 0, y: 0)
 
+        var yFrameIncrement = 100
+        var yFrom = 0
+        
+        if (stackOrder > 0) {
+            var isCoordinateOccupied: Bool
+            let currentView = subviews[stackOrder] as! UIView
+            
+            var randomTry = 0
+            isCoordinateOccupied = true
+            var xProposition: Int = 0
+            var yProposition: Int = 0 
+            
+            while (isCoordinateOccupied) {
+                while randomTry < 5 && isCoordinateOccupied {
+                    xProposition = UInt64.randomInt(0, max: Int(self.frame.size.width))
+                    yProposition = UInt64.randomInt(yFrom, max: yFrom+yFrameIncrement)
+                    
+                    if !isAreaOccupied(CGRectMake(CGFloat(xProposition), CGFloat(yProposition), currentView.frame.width, currentView.frame.height), stackOrder: stackOrder) {
+                        var widthPlusXPosition = xProposition+Int(currentView.frame.size.width)
+                        if  widthPlusXPosition < Int(self.frame.size.width) {
+                            isCoordinateOccupied = false
+                        }
+                    } else {
+                        randomTry++
+                    }
+                }
+                yFrom += yFrameIncrement
+                randomTry = 0
+                coordinate.x = CGFloat(xProposition)
+                coordinate.y = CGFloat(yProposition)
+            }
+        
+            
+            
+        }
+        return coordinate
+    }
+    
+
+    private func getNextAvailableCoordinateOld (stackOrder: Int) -> CGPoint {
+        var coordinate: CGPoint = CGPoint(x: 0, y: 0)
+                                                                                      
         if (stackOrder > 0) {
             var isCoordinateOccupied: Bool
             let currentView = subviews[stackOrder] as! UIView
