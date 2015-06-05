@@ -45,14 +45,17 @@ class ViewController: UIViewController {
         
 
 
-
+        
         node = ChartNodeModel(nodeID: 0, name: "Superman", starsQuantity: 2, color: "#00bcd4", imageID: "7", percentage: 0.0)
         dataFromService.result.append(node)
 
-        node = ChartNodeModel(nodeID: 0, name: "Star", starsQuantity: 1, color: "#00bcd4", imageID: "7", percentage: 0.0)
-        dataFromService.result.append(node)
+        for x in 1...20 {
+            node = ChartNodeModel(nodeID: 0, name: "Star", starsQuantity: 1, color: "#00bcd4", imageID: "7", percentage: 0.0)
+            dataFromService.result.append(node)
+        }
 
         
+        chart?.yFrameIncrement = 5
         chart?.createChart(dataFromService)
         
     }

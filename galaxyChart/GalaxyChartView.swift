@@ -12,6 +12,8 @@ import Foundation
 
 class GalaxyChartView: UIView {
 
+    
+    var yFrameIncrement = 50
     func createChart (galaxyData: GalaxyChartResponseModel  ) {
 
         var maxBubbleSize:Int = 140
@@ -49,7 +51,6 @@ class GalaxyChartView: UIView {
     private func getNextAvailableCoordinate (stackOrder: Int) -> CGPoint {
         var coordinate: CGPoint = CGPoint(x: 0, y: 0)
 
-        var yFrameIncrement = 100
         var yFrom = 0
         
         if (stackOrder > 0) {

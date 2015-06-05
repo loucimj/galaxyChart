@@ -99,7 +99,6 @@ class BubbleView: UIView {
         
         var imageView: UIImageView = UIImageView(image: image)
         
-        
         imageView.frame = CGRectMake(0, 0, imageSize,imageSize)
         imageView.center = CGPointMake( circleView.center.x, imageYCenterPosition)
 

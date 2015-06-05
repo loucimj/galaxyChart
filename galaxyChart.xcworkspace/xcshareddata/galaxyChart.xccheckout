@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AD326509-0103-411F-BEE7-21231E344537</string>
+	<string>F4F61DFA-14AA-41F7-B311-EDA6A91B3CC2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>galaxyChart</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/loucimj/galaxyChart.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>galaxyChart.xcodeproj</string>
+	<string>galaxyChart.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CC85470697B2CEEC142C5A3C46A302C47BA8BA1D</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/loucimj/galaxyChart.git</string>

@@ -15,8 +15,14 @@ class ChartNodeModel {
     var color: String = ""
     var imageID: String = ""
     var percentage: Float = 0.0
+    var imageURL: String = ""
 
-    init (nodeID: Int, name:String, starsQuantity: Int,color:String,imageID: String,percentage: Float) {
+    
+    init () {
+        
+    }
+    convenience init (nodeID: Int, name:String, starsQuantity: Int,color:String,imageID: String,percentage: Float) {
+        self.init()
         self.nodeID = nodeID
         self.name = name
         self.starsQuantity = starsQuantity
@@ -24,4 +30,17 @@ class ChartNodeModel {
         self.imageID = imageID
         self.percentage = percentage
     }
+
+    convenience init (nodeID: Int, name:String, starsQuantity: Int,color:String,imageID: String,percentage: Float,imageURL: String) {
+        self.init()
+        self.nodeID = nodeID
+        self.name = name
+        self.starsQuantity = starsQuantity
+        self.color = color
+        self.imageID = imageID
+        self.percentage = percentage
+        self.imageURL = imageURL
+    }
+
+
 }
