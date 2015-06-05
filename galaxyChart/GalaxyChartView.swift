@@ -14,6 +14,9 @@ class GalaxyChartView: UIView {
 
     
     var yFrameIncrement = 50
+    
+    private var layoutDone: Bool = false
+    
     func createChart (galaxyData: GalaxyChartResponseModel  ) {
 
         var maxBubbleSize:Int = 140
@@ -35,17 +38,30 @@ class GalaxyChartView: UIView {
     }
     
     override func layoutSubviews() {
-        var startingPoint: CGPoint = CGPoint(x: 0,y: 0)
-        var nextPoint: CGPoint
-        var minimumHeight: CGFloat = 0
         
-        let viewsCount:Int = subviews.count
-        for index in 0..<viewsCount {
-            var newOrigin:CGPoint = getNextAvailableCoordinate(index)
-            var view = subviews[index] as! UIView
-            view.frame.origin = newOrigin
+        if !layoutDone {
+            var startingPoint: CGPoint = CGPoint(x: 0,y: 0)
+            var nextPoint: CGPoint
+            var minimumHeight: CGFloat = 0
+            
+            let viewsCount:Int = subviews.count
+            
+            var newHeight:CGFloat = CGFloat(0)
+            
+            for index in 0..<viewsCount {
+                var newOrigin:CGPoint = getNextAvailableCoordinate(index)
+                var view = subviews[index] as! UIView
+                view.frame.origin = newOrigin
+                
+                if (view.frame.origin.y + view.frame.size.height) > newHeight {
+                    newHeight = view.frame.origin.y + view.frame.size.height
+                }
+            }
+            
+            self.frame.size.height = newHeight
+            super.layoutSubviews()
+            layoutDone = true
         }
-        super.layoutSubviews()
     }
     
     private func getNextAvailableCoordinate (stackOrder: Int) -> CGPoint {

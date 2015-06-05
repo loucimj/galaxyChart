@@ -67,7 +67,7 @@ class PeopleBubble: UIView {
         self.addSubview(bubbleLabel)
         
         if (animated) {
-            self.transform = CGAffineTransformMakeScale(0.3, 0.3)
+            self.transform = CGAffineTransformMakeScale(0.45, 0.45)
             self.alpha = 0
             var delay:Float = Float(arc4random_uniform(100) )/100
             UIView.animateWithDuration(1.3,

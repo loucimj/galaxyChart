@@ -81,30 +81,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-T7-unV" customClass="PeopleGalaxyView" customModule="galaxyChart" customModuleProvider="target">
-                                <rect key="frame" x="6" y="35" width="600" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-Xb-5wb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-T7-unV" customClass="PeopleGalaxyView" customModule="galaxyChart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="weV-kb-bv8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ref-T7-unV" firstAttribute="leading" secondItem="Q44-Xb-5wb" secondAttribute="leading" id="9Xa-oB-oFU"/>
+                                    <constraint firstItem="Ref-T7-unV" firstAttribute="top" secondItem="Q44-Xb-5wb" secondAttribute="top" id="WVm-eE-lh3"/>
+                                    <constraint firstItem="Ref-T7-unV" firstAttribute="width" secondItem="Q44-Xb-5wb" secondAttribute="width" id="XqO-lX-mqk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ref-T7-unV" secondAttribute="trailing" id="x1L-SX-RCy"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ref-T7-unV" firstAttribute="leading" secondItem="wqz-s4-NS1" secondAttribute="leadingMargin" constant="-10" id="4h4-tx-iaa"/>
-                            <constraint firstAttribute="centerX" secondItem="Ref-T7-unV" secondAttribute="centerX" constant="87" id="4ts-At-iBp"/>
-                            <constraint firstAttribute="width" secondItem="Ref-T7-unV" secondAttribute="width" id="Nx9-Yv-zxc"/>
-                            <constraint firstItem="Ref-T7-unV" firstAttribute="top" secondItem="C3f-yf-IMv" secondAttribute="bottom" constant="15" id="g6Y-Em-p7Z"/>
-                            <constraint firstItem="Ref-T7-unV" firstAttribute="leading" secondItem="wqz-s4-NS1" secondAttribute="leadingMargin" constant="-10" id="jNN-Ly-pQi"/>
-                            <constraint firstItem="MQP-aQ-aJM" firstAttribute="top" secondItem="Ref-T7-unV" secondAttribute="bottom" constant="113" id="rHq-d4-XOo"/>
+                            <constraint firstItem="Q44-Xb-5wb" firstAttribute="bottom" secondItem="MQP-aQ-aJM" secondAttribute="top" id="0LP-it-KWv"/>
+                            <constraint firstItem="Q44-Xb-5wb" firstAttribute="leading" secondItem="wqz-s4-NS1" secondAttribute="leading" id="1TA-yt-QLw"/>
+                            <constraint firstItem="Q44-Xb-5wb" firstAttribute="top" secondItem="wqz-s4-NS1" secondAttribute="top" id="CEs-By-XVP"/>
+                            <constraint firstAttribute="trailing" secondItem="Q44-Xb-5wb" secondAttribute="trailing" id="hh1-9U-Koa"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4ts-At-iBp"/>
-                                <exclude reference="4h4-tx-iaa"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="1FX-zf-h3X"/>
                     <connections>
                         <outlet property="chart" destination="Ref-T7-unV" id="Ukb-be-371"/>
+                        <outlet property="scrollView" destination="Q44-Xb-5wb" id="ZeL-Sf-5hw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tV-fx-0S6" sceneMemberID="firstResponder"/>
